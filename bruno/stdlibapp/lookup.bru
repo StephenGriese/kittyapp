@@ -1,0 +1,21 @@
+meta {
+  name: lookup
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:19633/lookup
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{jwt_hendrix_sat}}
+}
+
+body:json {
+  {
+    "word": "bird"
+  }
+}
